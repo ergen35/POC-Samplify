@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Samplify.MainPage"
+             xmlns:models="clr-namespace:Samplify.Models"
+             xmlns:viewModel="clr-namespace:Samplify.ViewModels"
+             x:DataType="viewModel:MonkeysViewModel"
+             xmlns:mauiToolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="{Binding Title}">
+
+
+    <Grid RowDefinitions="*,auto">
+
+        <CollectionView Grid.Row="0" SelectionMode="None" ItemsSource="{Binding Monkeys}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Monkey">
+                    <Frame CornerRadius="5" Padding="5,0" Margin="10, 5" BorderColor="{StaticResource PrimaryDark}" HasShadow="True">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Binding .}" 
+                                                  Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MonkeysViewModel}}, Path=GoToDetailsCommand}" />
+                        </Frame.GestureRecognizers>
+                        <HorizontalStackLayout>
+                            <Image Source="dotnet_bot.png" HeightRequest="100" WidthRequest="100" />
+                            <VerticalStackLayout Padding="10" VerticalOptions="Center">
+                                <Label Text="{Binding Name}" FontSize="20" FontAttributes="Italic" TextColor="Indigo" />
+                                <Label TextColor="DarkOliveGreen">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0}">
+                                            <Binding Path="Location"/>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <Grid ColumnDefinitions="*,*" Grid.Row="1" Padding="10, 10">
+            
+            <Button Text="Search" Grid.Column="0" Margin="0,0,10,0" Command="{Binding GetMonkeysCommand}" IsEnabled="{Binding IsNotBusy}"/>
+            <Button  Text="Find Closest" Grid.Column="1" Command="{Binding DisplayAlertCommand}" />
+        
+        </Grid>
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}" 
+                   IsRunning="{Binding IsBusy}" 
+                   HorizontalOptions="FillAndExpand"  
+                   VerticalOptions="CenterAndExpand"/>
+        
+    </Grid>
+</ContentPage>

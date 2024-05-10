@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Samplify.Views.MonkeyDetailsPage"
+             xmlns:models="clr-namespace:Samplify.Models"
+             xmlns:viewModels="clr-namespace:Samplify.ViewModels"
+             x:DataType="viewModels:MonkeyDetailsViewModel"
+             Title="{Binding Title}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,auto,*" RowDefinitions="160, auto">
+                <BoxView Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="DarkOrange" />
+                <Frame  Grid.RowSpan="3" Grid.ColumnSpan="4" 
+                        Margin="0,120,0,0" BackgroundColor="White" 
+                        HeightRequest="160" WidthRequest="160"
+                        CornerRadius="100" BorderColor="White"
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="dotnet_bot.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                </Frame>
+
+                <HorizontalStackLayout>
+
+                </HorizontalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

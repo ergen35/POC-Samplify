@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samplify", "Samplify\Samplify.csproj", "{83285F65-97BF-43AC-9240-87A6EEDD21BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{83285F65-97BF-43AC-9240-87A6EEDD21BB}.Staging|Any CPU.Deploy.0 = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E457E2D1-BC1A-4FCE-9A12-38302564C501}
+	EndGlobalSection
+EndGlobal
